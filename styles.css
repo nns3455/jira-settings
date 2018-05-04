@@ -1,3 +1,14 @@
 .flooded th {
 	min-width: 100px;
 }
+
+#customfieldmodule .property-list > .customfieldlinkitem .name {
+	font-weight: bold;
+	text-decoration:underline;
+	
+}
+
+#customfieldmodule .property-list > .customfieldlinkitem .name:hover {
+	cursor: pointer;
+	color: #000000;
+}

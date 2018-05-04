@@ -20,12 +20,7 @@ $(document).ready(function(){
 		
 		var innerHtml = $inner.html();
 		$name.prop("title", "Open in new tab");
-		$name.css("font-weight", "bold");
-		$name.css("text-decoration", "underline");
-		$name.hover(function(e) {
-			$(this).css('cursor','pointer');
-			$(this).css('color', e.type === "mouseenter"?"black":"#707070");
-		});
+		$this.addClass("customfieldlinkitem");
 		$name.click(function() {
 			var win = window.open('');
 			win.document.write(innerHtml);
