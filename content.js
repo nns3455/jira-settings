@@ -1,6 +1,7 @@
 
 $(document).ready(function(){
 	var $rows = $('#customfieldmodule .property-list > .item:has(.flooded)');
+	var $labels = $('.issueaction-workflow-transition .trigger-label');
 
 	$rows.each(function() {
 		var $this = $(this);
@@ -29,5 +30,39 @@ $(document).ready(function(){
 			win.document.title = $name.text().trim().replace(':', '');
 		});
 		
+	});
+	
+	$labels.each(function(){
+		var $this = $(this);
+		
+		switch($this.html()){
+			case 'Analysis':
+				$this.html('Analyzing');
+				break;
+			case 'Analysis - 1':
+				$this.html('Analyzed');
+				break;
+			case 'Analysis - 2':
+				$this.html('Approving');
+				break;
+			case 'In Progress':
+				$this.html('Developing');
+				break;
+			case 'In Progress - 1':
+				$this.html('Developed');
+				break;
+			case 'In Testing':
+				$this.html('Testing');
+				break;
+			case 'In Testing - 1':
+				$this.html('Tested');
+				break;
+			case 'In Testing - 2':
+				$this.html('Demoing');
+				break;
+			case 'In Testing - 3':
+				$this.html('Deploying');
+				break;
+		}
 	});
 });
