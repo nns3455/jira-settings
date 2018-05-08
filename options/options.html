@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>JIRA-Helper Options</title>
+		<script src="../third_party/jquery-3.3.1.min.js"></script>
+		<link rel="stylesheet" href="custom.css">
+		<script src="options.js"></script>
+	</head>
+	
+	<body>
+		<header>
+			<h1>JIRA-Helper Options</h1>
+		</header>
+
+		<section id="custom-field-links-section">
+			<h3 class="section-header">Custom Field Links</h3>
+			<div class="section-description">Click the label of a custom field to open its contents in a new tab. (Useful for fields with poorly styled tables)</div>
+			
+			<div class="checkbox">
+				<label>
+					<input type="checkbox" data-option-id="custom-field-links-enabled" class="option">
+					<span>Enabled</span>
+				</label>
+			</div>
+		</section>
+
+		<section id="customizable-statuses-section">
+			<h3 class="section-header">Customizable Statuses</h3>
+			<div class="section-description">Customize the names of workflow statuses that are used by mapping the current name to the desired name.</div>
+			
+			<div class="checkbox">
+				<label>
+					<input type="checkbox" data-option-id="customizable-statuses-enabled" class="option">
+					<span>Enabled</span>
+				</label>
+			</div>
+		</section>
+
+		<div id="save-status"></div>
+		<button id="save">Save</button>
+	</body>
+</html>

@@ -1,15 +1,23 @@
 {
   "manifest_version": 2,
 
-  "name": "Ultidev Better JIRA Tables",
+  "name": "JIRA-Helper",
   "version": "0.1.0",
   "description": "Fixes the formatting of JIRA ticket tables",
 
   "content_scripts": [{
     "css": ["styles.css"],
-    "js": ["thirdParty/jquery-3.3.1.min.js", "content.js"],
+    "js": ["third_party/jquery-3.3.1.min.js", "content.js"],
     "matches": ["https://ultidev/browse/*"]
   }],
-  "web_accessible_resources": ["button.png"]
-
+  
+  "options_ui": {
+    "page": "options/options.html",
+    "open_in_tab": true,
+	"chrome_style": true
+  },
+  
+  "permissions" : [
+    "storage"
+  ]
 }

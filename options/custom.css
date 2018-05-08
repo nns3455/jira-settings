@@ -1,0 +1,70 @@
+
+
+body header > h1 {
+  margin: 0;
+  padding: 21px 0 13px;
+}
+
+/* Create a border under the h1 (but before anything that gets appended
+ * to the end of the header). */
+body header > h1::after {
+  -webkit-margin-end: 20px;
+  background-color: #eee;
+  content: ' ';
+  display: block;
+  height: 1px;
+  position: relative;
+  top: 13px;
+}
+
+body footer {
+  border-top: 1px solid #eee;
+  margin-top: 16px;
+  /* min-width and max-width should match the header */
+  max-width: 638px;
+  min-width: 600px;
+  padding: 8px 0;
+}
+
+/* Sections are used in options pages, help page and history page. This defines
+ * the section metrics to match the header metrics above. */
+body section {
+  -webkit-padding-start: 18px;
+  margin-bottom: 24px;
+  margin-top: 8px;
+  max-width: 600px;
+}
+
+body section > h3 {
+  -webkit-margin-start: -18px;
+}
+
+body .section-header {
+  -webkit-margin-start: -18px;
+  margin-top: 1.2em;
+  margin-bottom: 0.8em;
+}
+
+body section .section-description {
+  -webkit-margin-start: -18px;
+  margin-top: -0.4em;
+  margin-bottom: 0.8em;
+  color: #AAAABB
+}
+
+body .section-header > h3 {
+  display: inline;
+}
+
+:-webkit-any(.checkbox, .radio) label {
+  -webkit-user-select: none;
+  /* Don't expand horizontally: <http://crbug.com/112091>. */
+  align-items: center;
+  display: inline-flex;
+  padding-bottom: 7px;
+  padding-top: 7px;
+}
+
+:-webkit-any(.checkbox, .radio) label input ~ span {
+  -webkit-margin-start: 0.6em;
+}
