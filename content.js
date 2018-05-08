@@ -11,7 +11,8 @@ $(document).ready(function(){
 		'In Testing':'Testing',
 		'In Testing - 1':'Tested',
 		'In Testing - 2':'Demoing',
-		'In Testing - 3':'Deploying'
+		'In Testing - 3':'Deploying',
+		'In Testing - 4':'Closed'
 		};
 	
 	var $buttonLabels = $('.issueaction-workflow-transition .trigger-label');
