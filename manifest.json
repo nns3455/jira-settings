@@ -3,13 +3,17 @@
 
   "name": "JIRA-Helper",
   "version": "0.1.0",
-  "description": "Fixes the formatting of JIRA ticket tables",
+  "description": "Adds features to JIRA pages",
 
   "content_scripts": [{
     "css": ["styles.css"],
-    "js": ["third_party/jquery-3.3.1.min.js", "content.js"],
+    "js": ["third_party/jquery-3.3.1.min.js", "content/content.js"],
     "matches": ["https://ultidev/browse/*"]
   }],
+  "background": {
+	"scripts": ["content/background.js"],
+	"persistent": true
+  },
   
   "options_ui": {
     "page": "options/options.html",
@@ -18,6 +22,12 @@
   },
   
   "permissions" : [
-    "storage"
+    "storage",
+	"activeTab",
+	"tabs",
+	"webRequest",
+	"webRequestBlocking",
+	"http://*/",
+    "https://*/"
   ]
 }

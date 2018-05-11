@@ -12,7 +12,7 @@
 			<h1>JIRA-Helper Options</h1>
 		</header>
 
-		<section id="custom-field-links-section">
+		<section>
 			<h3 class="section-header">Custom Field Links</h3>
 			<div class="section-description">Click the label of a custom field to open its contents in a new tab. (Useful for fields with poorly styled tables)</div>
 			
@@ -24,13 +24,25 @@
 			</div>
 		</section>
 
-		<section id="customizable-statuses-section">
+		<section>
 			<h3 class="section-header">Customizable Statuses</h3>
 			<div class="section-description">Customize the names of workflow statuses that are used by mapping the current name to the desired name.</div>
 			
 			<div class="checkbox">
 				<label>
 					<input type="checkbox" data-option-id="customizable-statuses-enabled" class="option">
+					<span>Enabled</span>
+				</label>
+			</div>
+		</section>
+		
+		<section>
+			<h3 class="section-header">Open PDFs in Browser</h3>
+			<div class="section-description">Clicking the link to a PDF will open it in a new tab, rather than downloading it. <span style="color: #BB0000">(Note: this will be applied to all pages, not just JIRA)</span></div>
+			
+			<div class="checkbox">
+				<label>
+					<input type="checkbox" data-option-id="open-pdf-in-browser-enabled" class="option">
 					<span>Enabled</span>
 				</label>
 			</div>
